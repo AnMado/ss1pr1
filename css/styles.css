@@ -1,35 +1,46 @@
 body {
   background: rgba(5, 5, 20, 1);
 }
-nav {
-  display: inline;
-  margin-right: 10%;
+
+header{
+  padding: 10px 20px;
+  text-align: center;
 }
+
+nav {
+  
+}
+
 .menu-button{
   display: none;
 }
+
 .menu-b{
   display: none;
 }
+
+.logo{
+  display: inline;
+}
+
 .logo>a>img{
-  float: right;
-  height: 175px;
-  margin-right: 7%;
+  height: 160px;
 }
+
 .menu{
-  float: right;
-  margin-top: 4%;
+  display: inline;
+  padding: 20px 10px;
 	background-color: #FFF0F5;
-  width: 1025px;
-  height: 50px;
-	border-radius: 10px 10px 10px 10px;
+	border-radius: 10px;
 }
+
 .menu>li{
   white-space: nowrap;
 	list-style-type: none; /*Отключение маркера*/
   display: inline;
   margin: 0 40px;
 }
+
 .menu>li>a{
     color: rgba(104, 130, 217, 1);
     text-decoration: none;
@@ -53,42 +64,40 @@ nav {
 				         0px 11px 2px rgba(0,0,0,0.1), 
 				         0px 16px 10px rgba(0,0,0,0.1);	
 }
+
+
 @media (max-width: 1290px){ /*Меню номер 2*/
   .menu{
     display: none;
   }
 }
+
 @media(max-width: 768px){  /*Меню номер 3*/
+
   .menu-button{
     position: absolute;
     display: inline;
-    top: 50px;
-    left: 15%;
-    cursor: pointer;
-    float: left;
+    left: 5px;
   }
 
   .menu-b{
     display: inline;
-    position: relative;
+    cursor: pointer;
+    padding: 5px 5px 7px 5px;
     background-color: #008CF2;
     color: #fff;
-    height: 70px;
     font-family: 'Fedra Sans',  sans-serif;
-    font-size: 177%;
+    font-size: 15px;
     font-weight: 730;
-    border-radius: 10px 10px 10px 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border-radius: 10px;
   }
   .menu-button>img{
-    position: absolute;
-    height: 80px;
+    cursor: pointer;
+    height: 30px;
   }
+
   .logo>a>img{
-    position: absolute;
-    margin-right: 22%;
-    margin-left: 47%;
+    height: 80px;
   }
   .menu{
     display: none;

@@ -1,45 +1,57 @@
 body {
   background: rgba(5, 5, 20, 1);
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+}
+nav {
+  display: inline;
+  margin-right: 10%;
+}
+.menu-button{
+  display: none;
+}
+.logo>a>img{
+  float: right;
+  height: 175px;
+  margin-right: 7%;
 }
 .menu{
+  float: right;
+  margin-top: 4%;
 	background-color: #FFF0F5;
+  width: 66%;
+  height: 50px;
 	border-radius: 10px 10px 10px 10px;
 }
-.menu>ul>li{
-	margin-top: 8px;
-	list-style-type: none;
-    display: inline;
-    margin: 0 40px;
+.menu>li{
+  white-space: nowrap;
+	list-style-type: none; /*Отключение маркера*/
+  display: inline;
+  margin: 0 40px;
 }
-.menu>ul>li>a{
-    color: #708090 !important;
+.menu>li>a{
+    color: rgba(104, 130, 217, 1);
     text-decoration: none;
     font-family: 'Fedra Sans',  sans-serif;
-    font-size: 28px;
+    font-size: 177%;
     font-weight: 730;
     text-shadow: 0.5px 0.5px 0px #2F4F4F, -0.5px -0.5px 0px #2F4F4F,
-    			 -0.5px 0.5px 0px #2F4F4F, 0.5px -0.5px 0px #2F4F4F,
-    			 1px 3px 2px rgba(0,0,0,0.3);
+    			       -0.5px 0.5px 0px #2F4F4F, 0.5px -0.5px 0px #2F4F4F,
+    			       1px 3px 2px rgba(0,0,0,0.3);
 }
-.menu>ul>li>a:hover{
-    color: #708090 !important;
+.menu>li>a:hover{
+    color: #db2727;
     text-decoration: none;
     font-family: 'Fedra Sans',  sans-serif;
-    font-size: 30px;
+    font-size: 185%;
     font-weight: 745;
-	text-shadow: 0.5px 0.5px 0px #2F4F4F, -0.5px -0.5px 0px #2F4F4F,
-    			 -0.5px 0.5px 0px #2F4F4F, 0.5px -0.5px 0px #2F4F4F,
-				 0px 3px 0px #b2a98f,
-				 0px 8px 6px rgba(0,0,0,0.15),
-				 0px 11px 2px rgba(0,0,0,0.1), 
-				 0px 16px 10px rgba(0,0,0,0.1);	
+	  text-shadow: 0.5px 0.5px 0px #2F4F4F, -0.5px -0.5px 0px #2F4F4F,
+    			       -0.5px 0.5px 0px #2F4F4F, 0.5px -0.5px 0px #2F4F4F,
+				         0px 3px 0px #b2a98f,
+				         0px 8px 6px rgba(0,0,0,0.15),
+				         0px 11px 2px rgba(0,0,0,0.1), 
+				         0px 16px 10px rgba(0,0,0,0.1);	
 }
+@media (max-width: 1250px){
+  .logo{
 
-.logo>a>img{
-	height: 175px;
+  }
 }

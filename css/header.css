@@ -25,7 +25,6 @@ nav {
 	border-radius: 10px 10px 10px 10px;
 }
 .menu>li{
-  white-space: nowrap;
 	list-style-type: none; /*Отключение маркера*/
   display: inline;
   margin: 0 40px;
@@ -117,19 +116,18 @@ nav {
     border-radius: 0 0 10px 10px;
   }
   .menu>li{
-    white-space: wrap; 
+    cursor: pointer;
     display: block;
     background: #008CF2;
     padding: 0 7%;
     border: 1px outset #004c82;
   }
   .menu>li>a{
-    white-space: wrap; 
     font-size: 3vw;
     color: #fff;
     text-shadow: none;
   }
-  .menu>li>a:hover{
+  .menu>li:hover>a{
     color: #fff;
     font-size: 3.5vw;
     text-shadow: 0px 1px 0px #b2a98f,
@@ -138,8 +136,7 @@ nav {
                  0px 8px 5px rgba(0,0,0,0.1);
   }
   .menu>li:hover{
-    background: #43a3e8;
-     
+    background: #43a3e8
   }
 
 

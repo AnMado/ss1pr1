@@ -3,12 +3,12 @@ body {
 }
 
 header{
-  padding: 10px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
 nav {
-  
+  display: inline;
 }
 
 .menu-button{
@@ -20,7 +20,7 @@ nav {
 }
 
 .logo{
-  display: inline;
+  float: right;
 }
 
 .logo>a>img{
@@ -28,14 +28,15 @@ nav {
 }
 
 .menu{
-  display: inline;
+  display: inline-block;
   padding: 20px 10px;
+  margin: 35px 10px;
 	background-color: #FFF0F5;
 	border-radius: 10px;
+  width: 80%;
 }
 
 .menu>li{
-  white-space: nowrap;
 	list-style-type: none; /*Отключение маркера*/
   display: inline;
   margin: 0 40px;
@@ -45,8 +46,10 @@ nav {
     color: rgba(104, 130, 217, 1);
     text-decoration: none;
     font-family: 'Fedra Sans',  sans-serif;
-    font-size: 177%;
+    line-height: 40px;
+    font-size: 30px;
     font-weight: 730;
+    transition: 0.5s;
     text-shadow: 0.5px 0.5px 0px #2F4F4F, -0.5px -0.5px 0px #2F4F4F,
     			       -0.5px 0.5px 0px #2F4F4F, 0.5px -0.5px 0px #2F4F4F,
     			       1px 3px 2px rgba(0,0,0,0.3);
@@ -55,7 +58,8 @@ nav {
     color: #db2727;
     text-decoration: none;
     font-family: 'Fedra Sans',  sans-serif;
-    font-size: 185%;
+    font-size: 35px;
+    line-height: 35px;
     font-weight: 745;
 	  text-shadow: 0.5px 0.5px 0px #2F4F4F, -0.5px -0.5px 0px #2F4F4F,
     			       -0.5px 0.5px 0px #2F4F4F, 0.5px -0.5px 0px #2F4F4F,

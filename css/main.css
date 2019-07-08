@@ -1,0 +1,15 @@
+.advert{
+	height: 100px;
+	width: auto;
+	background: #fff;
+	margin: 10px 0;
+	border-radius: 10px 10px 10px 10px;
+}
+.container{
+	margin-top: 20%;
+}
+@media(max-width: 768px){
+	.container{
+		margin-top: 45%;
+	}
+}

@@ -29,7 +29,6 @@ nav {
 	list-style-type: none; /*Отключение маркера*/
   display: inline;
   margin: 0 40px;
-  border: 1px outset #004c82;
 }
 .menu>li>a{
     color: rgba(104, 130, 217, 1);
@@ -54,7 +53,11 @@ nav {
 				         0px 11px 2px rgba(0,0,0,0.1), 
 				         0px 16px 10px rgba(0,0,0,0.1);	
 }
-
+@media (max-width: 1290px){ /*Меню номер 2*/
+  .menu{
+    display: none;
+  }
+}
 @media(max-width: 768px){  /*Меню номер 3*/
   nav{
     width: 40%;
@@ -103,6 +106,8 @@ nav {
     display: block;
     position: absolute;
     margin-top: 10%;
+    right: 36%;
+    left: 0;
     width: 44%; 
   }
   .start{

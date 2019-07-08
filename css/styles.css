@@ -29,11 +29,12 @@ nav {
 
 .menu{
   display: inline-block;
-  padding: 20px 10px;
-  margin: 35px 10px;
+  padding: 20px 30px;
+  margin: 35px;
 	background-color: #FFF0F5;
 	border-radius: 10px;
   width: 80%;
+  max-width: 1125px;
 }
 
 .menu>li{

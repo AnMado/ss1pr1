@@ -7,8 +7,9 @@ header{
   text-align: center;
 }
 nav {
-  display: inline-block;
+  display: inline;
 }
+
 .menublock { /*костыль :)*/
   margin-top: 40px;
 }
@@ -37,9 +38,9 @@ nav {
 .menu{
   display: inline-block;
   padding: 20px 30px;
-	background-color: #FFF0F5;
-	border-radius: 10px;
-  width: 100%;
+  background-color: #FFF0F5;
+  border-radius: 10px;
+  width: 80%;
   max-width: 1125px;
 }
 

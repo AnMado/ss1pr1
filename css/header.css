@@ -79,6 +79,11 @@ nav {
 }
 
 @media (max-width: 1200px) and (min-width: 769px){ /*Меню номер 2*/
+  
+  nav {
+    width: 70%;
+    text-align: left;
+  }
   .menu{
     display: none;
   }
@@ -86,14 +91,12 @@ nav {
     display: inline;
     color: #fff;
     font-size: 240%;
-    width: 70%;
     font-family: 'Russo One', sans-serif;
   }
   .reklama2 {
     display: block;
     color: #fff;
     font-size: 100%;
-    width: 70%;
     font-family: 'Roboto Slab', serif;
   }
   .reklama2 a{

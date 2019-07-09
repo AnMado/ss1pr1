@@ -8,12 +8,8 @@ header{
 }
 nav {
   display: inline;
+  float: left;
 }
-
-.menublock { /*костыль :)*/
-  margin-top: 40px;
-}
-
 .menu-button{
   display: none;
 }
@@ -36,18 +32,18 @@ nav {
 }
 
 .menu{
+  margin-top: 41px;
   display: inline-block;
-  padding: 20px 30px;
+  padding: 20px 0 20px;
   background-color: #FFF0F5;
   border-radius: 10px;
-  width: 80%;
-  max-width: 1125px;
+  width: 1050px;
 }
 
 .menu>li{
 	list-style-type: none; /*Отключение маркера*/
   display: inline;
-  margin: 0 40px;
+  margin: 0 30px;
 }
 
 .menu>li>a{
@@ -82,8 +78,11 @@ nav {
 @media (max-width: 1200px) and (min-width: 769px){ /*Меню номер 2*/
   
   nav {
+    margin-top: 20px;
+    display: inline-block;
     width: 70%;
     text-align: left;
+    float: none;
   }
   .menu{
     display: none;
@@ -108,6 +107,11 @@ nav {
 }
 
 @media(max-width: 768px){  /*Меню номер 3*/
+  nav {
+    display: inline-block;
+    float: none;
+    text-align: left;
+  }
   header {
     padding: 10px 10px;
   }
@@ -142,7 +146,8 @@ nav {
   .menublock{
     text-align: left;
   }
-  .menublock:hover .menu{
+  nav:hover .menu{
+    margin-top: 0;
     position: absolute;
     display: block;
     background: #008CF2;

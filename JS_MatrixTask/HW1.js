@@ -15,7 +15,7 @@ function extending(A, M){ //расширение матрицы до квадр�
 		A.push(str);
 	}
 	return A;
-} //Работает
+}
 
 function sum(A, B, sign){ //Сложение и вычитание двух матриц
 	var C = new Array(A.length);
@@ -29,20 +29,17 @@ function sum(A, B, sign){ //Сложение и вычитание двух ма
 }
 function concatArr(A, B, C, D, n, m){ //Сборка матрицы из блоков
 	var k = A.length;
+	var C = new Array(n);
 	for (var i = 0; i < n; i++){
-		if (i >= k){ 
-			A.push(C[i - k]);
-		}
-		for (var j = 0; j < m - B.length; j++){
-			if (i < k){ 
-				A[i].push(B[i][j]);
-			}
-			else {
-				A[i].push(D[i - k][j]);
-			}
+		C[i] = new Array(m);
+		for (var j = 0; j < m; j++){
+			if (i < k && j < k){ C[i][j] = A[i][j]; }
+			else if (i < k) { C[i][j] = B[i][j - k]; }
+			else if (j < k) { C[i][j] = C[i - k][j]; }
+			else { C[i][j] = D[i - k][j - k]; }
 		}
 	}
-	return A;
+	return C;
 }
 function product(A, B){ //Обычное перемножение
 	var C = new Array(A.length);
@@ -59,8 +56,6 @@ function product(A, B){ //Обычное перемножение
 }
 function productSh(A, B, strNum, colNum){//Алгоритм Штрассена
 	var M = A.length;
-	alert(A.join('\n'));
-	alert(B.join('\n'));
 	var A11 = A.slice(0, M / 2); A11.forEach(function(el, id) {this[id] = el.slice(0, M / 2);}, A11); 
 	var B11 = B.slice(0, M / 2); B11.forEach(function(el, id) {this[id] = el.slice(0, M / 2);}, B11);
 	var A21 = A.slice(M / 2, M); A21.forEach(function(el, id) {this[id] = el.slice(0, M / 2);}, A21);
@@ -86,10 +81,10 @@ function productSh(A, B, strNum, colNum){//Алгоритм Штрассена
 }
 
 function productChain(start, end){//перемножение цепочки матриц
-		if (start == end) return arrOfMatr[start];
+		var A = arrOfMatr[start];
+		var B = arrOfMatr[end];
+		if (start == end) return A;
 		else if (end - start == 1){
-			var A = arrOfMatr[start];
-			var B = arrOfMatr[end];
 			var M = Math.max(A.length, B[0].length, B.length);
 			if (M < 4){
 				 return product(A, B)
@@ -101,12 +96,23 @@ function productChain(start, end){//перемножение цепочки ма
 		}
 		else return product(productChain(start, s[start][end]), productChain(s[start][end] + 1, end));
 }
-/*Метод Гаусса
-function Det(A){
-	
+
+function Det(A){ // Поиск определителя методом Гаусса
+	var answer = 1;
+	for (var i = 0; i < A.length; i++){
+		for (j = i + 1; j < A.length; j++){
+			if (A[j][i] != 0){
+				var coef = A[j][i];
+				for (k = i; k < A.length; k++){
+					A[j][k] -= A[i][k] * coef / A[i][i];
+				}
+			}
+		}
+		answer *= A[i][i];
+	}
+	return answer;
 }
 
-*/
 
 var arrOfMatr = new Array();
 var flag = true;
@@ -146,8 +152,9 @@ if (flag){ //Тело программы
 		}
 	}
 	var resultMatr = productChain(0, N - 1);
-	resultMatr.forEach(function(el, id){this[id] = el.join(" ");}, resultMatr)
 	alert(resultMatr.join("\n"));
+	if (resultMatr.length == resultMatr[0].length) alert(Det(resultMatr));
+	else alert('Матрица не квадратная, детерминант не определен.');
 }else{
 	alert("Несовместимость размеров, перемножение невозможно!");
 }

@@ -1,0 +1,22 @@
+ul{
+    display: block;
+    margin: 100px 100px;
+}
+li{
+    position: relative;
+    cursor: pointer;
+    margin: 5px;
+    background: #55c3f2;
+    color: #fff;
+    font-size: 30px;
+    border-radius: 10px;
+    border: 2px solid darkslateblue;
+    padding: 10px;
+}
+#add input {
+    display: block;
+    border: 1px solid black;
+}
+#add button{
+    display: block;
+}

@@ -1,22 +1,19 @@
 $(document).ready(function(){
    $('ul').on('click','li',function (event) {
-       $(event.target).toggle(
-           function () {
-               $(this).animate({
-                    "right" : "-=100px"
-               }, 700)
-           },
-           function () {
-               $(this).detach()
-           }
-               )
-           }
-       )
+       $(event.target).animate({
+           "opacity":0,
+           "right":"100%",
+       },500,function(){
+           $(this).remove();
+       });
+
+
+   });
    $('#add p').click(function(){
        var name = $('#name').val();
        var cost = $('#cost').val();
        if (name && cost){
-           var el = $('<li>'+ name + cost + '</li>');
+           var el = $('<li>'+ name + ' - ' + cost + 'р </li>');
            $('ul').append(el);
        }
        else{
